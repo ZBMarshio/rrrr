@@ -1,0 +1,17 @@
+{
+    "python.defaultInterpreterPath": "/home/m/miniconda3/envs/embodied-learn/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "terminal.integrated.profiles.linux": {
+        "学习环境 (embodied-learn)": {
+            "path": "/bin/bash",
+            "args": [
+                "--rcfile",
+                "${workspaceFolder}/.vscode/embodied-learn.bash"
+            ],
+            "overrideName": true
+        }
+    },
+    "terminal.integrated.defaultProfile.linux": "学习环境 (embodied-learn)",
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda"
+}

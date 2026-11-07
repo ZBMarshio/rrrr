@@ -1,0 +1,25 @@
+<mujoco model="teaching_planar_2r">
+  <compiler angle="radian"/>
+  <option timestep="0.001" gravity="0 0 -9.81" integrator="Euler"/>
+  <default>
+    <joint damping="0.05"/>
+    <geom type="capsule" size="0.015" contype="0" conaffinity="0"/>
+  </default>
+  <worldbody>
+    <body name="link_1">
+      <inertial pos="0.15 0 0" mass="1" diaginertia="0.002 0.01 0.01"/>
+      <joint name="joint_1" type="hinge" axis="0 0 1" limited="true" range="-1.6 1.6"/>
+      <geom name="link_1_visual" fromto="0 0 0 0.3 0 0" rgba="0.2 0.4 0.8 1"/>
+      <body name="link_2" pos="0.3 0 0">
+        <inertial pos="0.1 0 0" mass="0.6" diaginertia="0.001 0.003 0.003"/>
+        <joint name="joint_2" type="hinge" axis="0 0 1" limited="true" range="-2.4 2.4"/>
+        <geom name="link_2_visual" fromto="0 0 0 0.2 0 0" rgba="0.8 0.4 0.1 1"/>
+        <site name="tool0" pos="0.2 0 0" size="0.01"/>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="motor_1" joint="joint_1" gear="1" ctrllimited="true" ctrlrange="-2 2"/>
+    <motor name="motor_2" joint="joint_2" gear="1" ctrllimited="true" ctrlrange="-2 2"/>
+  </actuator>
+</mujoco>

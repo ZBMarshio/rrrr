@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-30",
+  "python": "3.12.3",
+  "numpy": "1.26.4",
+  "device": "CPU",
+  "answer_blocks_loaded": 10,
+  "check_count": 55,
+  "checks": [
+    "basis_point_hand",
+    "inverse_transform",
+    "batch_matches_loop",
+    "difference_cancels_translation",
+    "rotation_preserves_norm",
+    "transpose_not_inverse_of_scale",
+    "reject_transposed_point_layout",
+    "reject_scale_as_rotation",
+    "reject_nonfinite_transform",
+    "chain_rule_hand",
+    "linearization_second_order",
+    "jacobian_matches_analytic",
+    "loss_chain_rule",
+    "abs_central_zero_not_differentiability",
+    "reject_nonpositive_fd_step",
+    "reject_changed_output_shape",
+    "reject_nonfinite_fd_output",
+    "fd_step_scan_finite",
+    "statistics_hand",
+    "three_seed_statistics",
+    "reject_single_sample_stats",
+    "reject_nonfinite_stats",
+    "conditional_probability_counts",
+    "noiseless_affine_hand",
+    "noisy_affine_hand",
+    "reject_rank_deficient_affine",
+    "reject_nonfinite_fit",
+    "ill_conditioned_hand",
+    "zero_residual_despite_wrong_solution",
+    "damping_hand",
+    "reject_negative_damping",
+    "minimum_norm_solution",
+    "training_only_scaling",
+    "reject_constant_feature",
+    "disjoint_groups",
+    "reject_group_overlap",
+    "reject_empty_group",
+    "window_source_overlap",
+    "metric_hand",
+    "reject_nan_metrics",
+    "reject_metric_broadcast",
+    "reject_empty_metrics",
+    "attempt_denominator",
+    "config_key_order_invariance",
+    "config_parameter_change",
+    "reject_nan_config",
+    "file_bytes_change_digest",
+    "rng_state_continuation",
+    "rng_state_json_roundtrip",
+    "seed_call_order_changes_inputs",
+    "reject_other_rng_state",
+    "frozen_example_affine_selected_by_validation",
+    "frozen_example_calibration_improves_holdout",
+    "csv_roundtrip",
+    "saved_inputs_reproduce_estimate"
+  ],
+  "basis": {
+    "R": [
+      [
+        0.0,
+        -1.0
+      ],
+      [
+        1.0,
+        0.0
+      ]
+    ],
+    "t_m": [
+      0.4,
+      0.1
+    ],
+    "point_B_m": [
+      0.2,
+      -0.1
+    ],
+    "point_A_m": [
+      0.5,
+      0.30000000000000004
+    ]
+  },
+  "jacobian": {
+    "analytic": [
+      [
+        0.6,
+        1.0
+      ],
+      [
+        0.955336489125606,
+        0.0
+      ]
+    ],
+    "numeric": [
+      [
+        0.5999999999825589,
+        1.000000000001
+      ],
+      [
+        0.9553364891112803,
+        0.0
+      ]
+    ],
+    "fd_h_values": [
+      0.01,
+      0.006309573444801929,
+      0.003981071705534973,
+      0.0025118864315095794,
+      0.001584893192461114,
+      0.001,
+      0.000630957344480193,
+      0.0003981071705534969,
+      0.00025118864315095795,
+      0.00015848931924611142,
+      9.999999999999999e-05,
+      6.309573444801929e-05,
+      3.9810717055349695e-05,
+      2.5118864315095822e-05,
+      1.5848931924611107e-05,
+      9.999999999999999e-06,
+      6.30957344480193e-06,
+      3.981071705534969e-06,
+      2.5118864315095823e-06,
+      1.584893192461111e-06,
+      1e-06,
+      6.30957344480193e-07,
+      3.981071705534969e-07,
+      2.511886431509577e-07,
+      1.584893192461111e-07,
+      1e-07,
+      6.30957344480193e-08,
+      3.981071705534969e-08,
+      2.5118864315095768e-08,
+      1.5848931924611106e-08,
+      1e-08,
+      6.309573444801943e-09,
+      3.981071705534969e-09,
+      2.5118864315095717e-09,
+      1.5848931924611107e-09,
+      9.999999999999999e-10,
+      6.309573444801942e-10,
+      3.981071705534969e-10,
+      2.5118864315095717e-10,
+      1.584893192461111e-10,
+      9.999999999999999e-11,
+      6.309573444801917e-11,
+      3.981071705534969e-11,
+      2.511886431509582e-11,
+      1.5848931924611107e-11,
+      1e-11,
+      6.309573444801917e-12,
+      3.9810717055349695e-12,
+      2.511886431509572e-12,
+      1.5848931924611108e-12,
+      1e-12
+    ],
+    "fd_absolute_error": [
+      1.592219520774041e-05,
+      6.338759158119878e-06,
+      2.523508497720428e-06,
+      1.0046273062336297e-06,
+      3.999493882744787e-07,
+      1.5922274987367757e-07,
+      6.338768898661584e-08,
+      2.523516073882348e-08,
+      1.004636751567034e-08,
+      3.999454545322578e-09,
+      1.5922300145021495e-09,
+      6.340724612030613e-10,
+      2.5287361093973004e-10,
+      9.965528402489099e-11,
+      3.9857228628648045e-11,
+      1.7101098315208674e-11,
+      1.5017986854104493e-12,
+      4.912736883966318e-13,
+      4.627964678149965e-12,
+      4.832134692378531e-12,
+      1.4325651775948245e-11,
+      2.897126982759346e-12,
+      7.619938013903038e-11,
+      2.8523183814854747e-11,
+      1.7995793744063349e-10,
+      4.208122739157716e-11,
+      3.5481417803850945e-10,
+      1.3295708978233733e-10,
+      6.915048533784329e-10,
+      3.454196928487363e-10,
+      1.4298600081730228e-09,
+      1.8446689731277388e-09,
+      1.3295708978233733e-10,
+      7.0432787380170225e-09,
+      9.101711828662928e-09,
+      1.5223485472226628e-08,
+      6.953255637931477e-09,
+      2.104861318574791e-08,
+      8.439113452496372e-08,
+      2.661429598926901e-08,
+      1.540013635503712e-07,
+      2.2690137380099173e-07,
+      4.8670240615500404e-08,
+      9.683666324367124e-07,
+      4.987632324926494e-07,
+      6.786659049184962e-07,
+      6.528910831971046e-07,
+      7.02055561918602e-06,
+      2.0733359961111475e-06,
+      7.503796946473074e-06,
+      1.7332011274406867e-05
+    ]
+  },
+  "ill_conditioned": {
+    "A": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1e-06
+      ]
+    ],
+    "b": [
+      1.0,
+      1e-06
+    ],
+    "b_noisy": [
+      1.0,
+      2e-06
+    ],
+    "condition_number": 1000000.0,
+    "unregularized": [
+      1.0,
+      2.0
+    ],
+    "damping": 0.001,
+    "damped": [
+      0.9999990000010002,
+      1.999998000001926e-06
+    ]
+  },
+  "calibration": {
+    "true_a": 1.08,
+    "true_b_m": 0.015,
+    "noise_std_m": 0.001,
+    "seeds": {
+      "train": 60,
+      "val": 61,
+      "test": 62
+    },
+    "counts": {
+      "train": 10,
+      "val": 6,
+      "test": 6
+    },
+    "fit_a": 1.0845803974063162,
+    "fit_b_m": 0.014018856551238353,
+    "offset_only_b_m": 0.035163955902817165,
+    "singular_values": [
+      3.2610928126087315,
+      0.39145450631540013
+    ],
+    "selected_by_val": "affine",
+    "metrics": {
+      "val": {
+        "raw": {
+          "count": 6,
+          "mean_signed": 0.03533082345632261,
+          "mae": 0.03533082345632261,
+          "mse": 0.001353753340183492,
+          "rmse": 0.036793387180082945,
+          "max_abs": 0.05085495623435543
+        },
+        "offset_only": {
+          "count": 6,
+          "mean_signed": 0.00016686755350543472,
+          "mae": 0.008784576130943437,
+          "mse": 0.00010551409886206893,
+          "rmse": 0.010272005591025977,
+          "max_abs": 0.015691000331538252
+        },
+        "affine": {
+          "count": 6,
+          "mean_signed": -0.0006259899424529309,
+          "mae": 0.0009589862593458476,
+          "mse": 1.487013695367208e-06,
+          "rmse": 0.0012194317100056107,
+          "max_abs": 0.002340824967706656
+        }
+      },
+      "test": {
+        "raw": {
+          "count": 6,
+          "mean_signed": 0.03423302616389364,
+          "mae": 0.03423302616389364,
+          "mse": 0.0012806601356498794,
+          "rmse": 0.035786312126983404,
+          "max_abs": 0.04910859424549552
+        },
+        "offset_only": {
+          "count": 6,
+          "mean_signed": -0.0009309297389235305,
+          "mae": 0.009288497713544295,
+          "mse": 0.00010962668549086505,
+          "rmse": 0.01047027628531669,
+          "max_abs": 0.015586213048104966
+        },
+        "affine": {
+          "count": 6,
+          "mean_signed": -0.0008583317024261142,
+          "mae": 0.0008583317024261142,
+          "mse": 9.091979931584056e-07,
+          "rmse": 0.0009535187429507643,
+          "max_abs": 0.001504075610151756
+        }
+      }
+    },
+    "csv_sha256": "1dd5aa62bcd3b9b1d98f664354bb5ea2e7f7fe35b5e4bae6b891dd5023cf212b"
+  },
+  "scope": "Synthetic CPU arithmetic and recording checks; no robot/calibration hardware/PPO training."
+}

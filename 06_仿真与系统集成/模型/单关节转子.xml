@@ -1,0 +1,18 @@
+<mujoco model="teaching_single_rotor">
+  <compiler angle="radian"/>
+  <option timestep="0.001" gravity="0 0 0" integrator="Euler"/>
+  <worldbody>
+    <body name="rotor">
+      <!-- Explicit teaching inertia; visual geometry is not a mass-identification result. -->
+      <inertial pos="0 0 0" mass="1" diaginertia="0.03 0.03 0.05"/>
+      <joint name="joint_1" type="hinge" axis="0 0 1" damping="0.1"/>
+      <geom name="rotor_visual" type="cylinder" size="0.25 0.02"
+            contype="0" conaffinity="0" rgba="0.2 0.4 0.8 1"/>
+      <site name="tip" pos="0.25 0 0" size="0.01"/>
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="motor_1" joint="joint_1" gear="1"
+           ctrllimited="true" ctrlrange="-2 2"/>
+  </actuator>
+</mujoco>

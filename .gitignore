@@ -1,0 +1,24 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---- 练习产物（由你自己决定是否保留在版本库中）----
+# 讲义建议的项目结构里有 runs/ 与 data/，先默认忽略 runs/ 的输出，
+# 需要保留某次证据时用 git add -f 明确加入。
+runs/
+trajectory_lab/runs/
+
+# ---- ROS 2 / colcon ----
+build/
+install/
+log/
+
+# ---- 编辑器与系统 ----
+.vscode/*.local.json
+.DS_Store
+*.swp
