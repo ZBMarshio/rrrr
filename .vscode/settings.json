@@ -12,6 +12,6 @@
         }
     },
     "terminal.integrated.defaultProfile.linux": "学习环境 (embodied-learn)",
-    "python-envs.defaultEnvManager": "ms-python.python:system",
-    "python-envs.defaultPackageManager": "ms-python.python:pip"
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda"
 }
