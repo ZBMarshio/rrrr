@@ -13,7 +13,7 @@ print("(q + bias).shape:", (q + bias).shape)
 print("(q * q).shape:", (q * q).shape)      # 逐点相称，不会变化shape
 print("(q @ q.T).shape:", (q @ q.T).shape)  # 作矩阵乘法
 
-print("(np.mean(q, axis=0)):", np.mean(q, axis=0)) # 沿第0轴作平均值，也就是列
-print("(np.mean(q, axis=1)):", np.mean(q, axis=1)) # 沿第1轴作平均值，也就是行
+print("(np.mean(q, axis=0)):", np.mean(q, axis=0)) # 沿第0轴作平均值，也就是列，实际表示各个关节在这段时间内的平均值
+print("(np.mean(q, axis=1)):", np.mean(q, axis=1)) # 沿第1轴作平均值，也就是行，表示该时刻下两个关节的平均值，没有实际意义
 print("(np.mean(q, axis=0)).shape:", (np.mean(q, axis=0)).shape)
 print("(np.mean(q, axis=1)).shape:", (np.mean(q, axis=1)).shape)
