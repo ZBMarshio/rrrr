@@ -1,0 +1,5 @@
+{
+  "input": "data/trajectory.csv",
+  "output_dir": "runs/baseline",
+  "angle_unit": "rad"
+}
