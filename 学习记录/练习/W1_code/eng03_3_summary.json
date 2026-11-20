@@ -1,0 +1,14 @@
+{
+  "data_source": "synthetic",
+  "input": "/home/m/桌面/rrrr/学习记录/练习/W1_code/trajectory_lab/data/trajectory.csv",
+  "n_samples": 4,
+  "time_unit": "s",
+  "angle_unit": "rad",
+  "error_definition": "q_obs - q_ref",
+  "rmse_per_joint_rad": [],
+  "config": "/home/m/桌面/rrrr/学习记录/练习/W1_code/trajectory_lab/config.json",
+  "code_version": ""
+}
+
+# with (out_dir / "summary.json").open("w", encoding="utf-8") as f:
+#     json.dump(summary, f, ensure_ascii=False, indent=2, allow_nan=False)

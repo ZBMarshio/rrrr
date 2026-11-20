@@ -1,5 +1,6 @@
 import csv
 import math
+from pathlib import Path
 
 FIELDS = (
     "t_s", "q_ref_1_rad", "q_ref_2_rad",
@@ -29,3 +30,10 @@ def load_csv(path):
     if len(times) < 2:
         raise ValueError("at least two samples required")
     return times, ref, obs
+
+if __name__ == "__main__":
+    csv_path = Path(__file__).resolve().parent / "trajectory_lab" / "data" / "trajectory.csv"
+    times, ref, obs = load_csv(csv_path)
+    print("times:\n", times)
+    print("ref:\n", ref)
+    print("obs:\n", obs)

@@ -1,0 +1,5 @@
+{
+  "input": "data/exp1.csv",
+  "output_dir": "runs/exp1",
+  "angle_unit": "rad"
+}

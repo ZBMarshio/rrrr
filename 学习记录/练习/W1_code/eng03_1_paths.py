@@ -10,8 +10,7 @@ def resolve_paths(config_path):
     output_dir = (root / config["output_dir"]).resolve()
     return input_path, output_dir
 
-print(resolve_paths("/home/m/桌面/rrrr/学习记录/练习/W1_code/trajectory_lab/config.json"))
-
-# 输出为(PosixPath('/home/m/桌面/rrrr/学习记录/练习/W1_code/trajectory_lab/data/trajectory.csv'), 
-# PosixPath('/home/m/桌面/rrrr/学习记录/练习/W1_code/trajectory_lab/runs/baseline'))
+if __name__ == "__main__":
+    config = Path(__file__).resolve().parent / "trajectory_lab" / "config.json"
+    print(resolve_paths(config))
 

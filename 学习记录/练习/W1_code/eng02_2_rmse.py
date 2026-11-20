@@ -29,8 +29,8 @@ def rmse_per_joint(q_ref, q_obs):
     
     return np.sqrt(np.mean((q_ref - q_obs)**2, axis=0))
 
-rmse = rmse_per_joint(q_r, q_o)
-print("rmse=", rmse)
+if __name__ == "__main__":
+    print("rmse=", rmse_per_joint(q_r, q_o))
 
 # 原本 rmse= [0.19364917 0.1118034 ]
 # obs 两关节都+0.1 rmse= [0.28722813 0.19364917]
